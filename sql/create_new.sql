@@ -5,6 +5,7 @@ use githelp;
 CREATE TABLE Lesson (
 	uid int primary key,
 	chapter int,
+	lesson int,
 	title blob,
 	body blob
 );
