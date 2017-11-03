@@ -12,7 +12,7 @@ create TABLE QuizQuestion (
 	uid int primary key,
 	chapter int,
 	questionText blob,
-	questionID int auto_increment,
+	questionID int,
 	questionAnswer int
 );
 
