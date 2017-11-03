@@ -41,18 +41,14 @@ class Lessons:
 
 	"""Write all the Lesson objects to the MySQL database"""
 	def write_to_db(self):
-	conn = MySQLdb.connect(host="localhost",
-                  user="root",
-                  passwd="engineering",
-                  db="githelp")
-	x = conn.cursor()
+		conn = MySQLdb.connect(host="localhost", user="root", passwd="engineering",db="githelp")
+		x = conn.cursor()
 
-	try:
-	   x.execute("""INSERT INTO anooog1 VALUES (%s,%s)""",(188,90))
-	   conn.commit()
-	except:
-	   conn.rollback()
-		
+		try:
+		   x.execute("""INSERT INTO anooog1 VALUES (%s,%s)""",(188,90))
+		   conn.commit()
+		except:
+		   conn.rollback()
 
 
 # sorts the list so that it reads the list properly
