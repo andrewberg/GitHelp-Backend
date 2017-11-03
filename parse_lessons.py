@@ -13,15 +13,30 @@ class Lesson:
 		self.title = title
 		self.body = body
 
+	"""String print function"""
+	def __str__(self):
+		print(str(self.chapter) + '.' + str(self.lesson))
+		print(title)
+		print(body)
+
+		return ""
+
 class Lessons:
 	
 	"""Lessons object to hold Lesson objects"""
 	def __init__(self):
 		self.lessons = []
 
+	"""Prints each one of the Lesson objects when Lessons class is printed"""
+	def __str__(self):
+		for lesson in self.lessons:
+			print(lesson)
+
+		return ""
+
 	"""Adds Lesson to array to store it"""
 	def add_lesson(self, lesson):
-		self.lessons.add(lesson)
+		self.lessons.append(lesson)
 
 	"""Write all the Lesson objects to the MySQL database"""
 	def write_to_db(self):
@@ -29,33 +44,37 @@ class Lessons:
 
 
 # sorts the list so that it reads the list properly
-directory_list = sorted(listdir('../lessons/'))
+directory_list = sorted(listdir('./lessons/'))
 
 # defines data for storage
 data = []
+
+# define the Lessons object
+
+lessons = Lessons()
 
 # loops through the directory_list
 #for file in xrange(2,3):
 
 	# opens the file and loads the JSON in from each of the files
-#	with open('../lessons/' + directory_list[file]) as data_file:    
+#	with open('./lessons/' + directory_list[file]) as data_file:    
 #	    data.append(json.load(data_file))
 
 # temporary because 1-6 is not complete data yet
 
-with open('../lessons/lessonsch1.json') as data_file:
+with open('./lessons/lessonsch1.json') as data_file:
 	data.append(json.load(data_file))
 
-with open('../lessons/lessonsch2.json') as data_file:
+with open('./lessons/lessonsch2.json') as data_file:
 	data.append(json.load(data_file))
 
-with open('../lessons/lessonsch3.json') as data_file:
+with open('./lessons/lessonsch3.json') as data_file:
 	data.append(json.load(data_file))
 
-with open('../lessons/lessonsch4.json') as data_file:
+with open('./lessons/lessonsch4.json') as data_file:
 	data.append(json.load(data_file))
 
-with open('../lessons/lessonsch5.json') as data_file:
+with open('./lessons/lessonsch5.json') as data_file:
 	data.append(json.load(data_file))
 
 # extracts the lesson from the lesson dictionary part of the data
@@ -74,10 +93,16 @@ for chapter in xrange(len(data)):
 	for lesson in xrange(len(data[chapter])):
 		
 		# extracting the values from the JSON array
-		
-		print(str(chapter) + '.' + str(lesson))
 
 		title = data[chapter][lesson]['title']
 		body = data[chapter][lesson]['body']
 		
+		# create the lesson object from the extracted values
 		
+		lesson = Lesson(chapter, lesson, title, body)
+
+		# add the lesson to the lessons object
+		
+		lessons.add_lesson(lesson)
+
+str(lessons)
