@@ -1,2 +1,33 @@
-{"quiz": {"title":"Quiz 2", "questions":[{"text":"", "choices":[], "index": }, {"text":"", "choices":[], "index": }, {"text":"", "choices":[], "index": }, {"text":"", "choices":[], "index": }, {"text":"", "choices":[], "index": }]
+{
+  "quiz": 
+  {
+    "title":"Quiz 2",
+    "questions":
+    [
+      {
+      "text":"Which command creates a new subdirectory that contains all of the necessary repository files — a Git repository skeleton?", 
+      "choices":["git add", "git init" , "git commit"], 
+      "index":1 
+    }, 
+      {
+      "text":"How do you stage a new/modified file?", 
+      "choices":["git add", "git init" , "git commit"], 
+      "index":0 
+    }, 
+      {
+        "text":"How would you ignore files with .txt?", 
+        "choices":[" 'cat .gitignore' followed by '*.[txt]' "," 'cat .gitignore' followed by '*.txt' "," 'cat .gitignore' followed by '*.[^txt]'"], 
+        "index":1 
+      }, 
+        {
+        "text":"Which command flag for the git status gives a simplified output?", 
+        "choices":["git status -o","git status -l","git status -s"], 
+        "index": 2
+      }, 
+      {
+        "text":"What are the two states that a file in a working directory can be in?", 
+        "choices":["staged or unstaged", "modified or unmodified", "tracked or untracked"], 
+        "index": 2
+      }
+        ]
 }}
