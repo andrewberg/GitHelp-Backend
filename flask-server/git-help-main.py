@@ -33,15 +33,37 @@ def print_quizzes():
 	data = ""
 
 	try:
-	   #x.execute("""SELECT * FROM QuizQuestion as qq LEFT JOIN QuizChoices as qc on qq.questionID = qc.questionID
-	   	#			UNION
-	   	#			SELECT * FROM QuizQuestion as qq RIGHT JOIN QuizChoices as qc on qq.questionID = qc.questionID""")
+	   x.execute("""SELECT qq.chapter, qq.questionText, qq.questionID, qq.questionID, qq.questionAnswer, qc.text, qc.questionID FROM QuizQuestion as qq, QuizChoices as qc WHERE qq.questionID = qc.questionID """)
 	   
-	   	
+
 	   data = x.fetchall()
 	except Exception as e:
 		print(e)
 	   	conn.rollback()
+
+	jsonlist = []
+	cur_chapter = 0
+	cur_question = 0
+
+	question_choices = []
+	cur_choices = []
+	questions = []
+
+	for row in data:
+		if (int(row[2]) is cur_question):
+			print('true')
+			cur_choices.append(row[5])
+		else:
+			cur_question += 1
+			#print('poop')
+			question_choices.append(cur_choices)
+			cur_choices = []
+			questions.append(row[1])
+
+
+	print(questions)
+
+
 
 	return jsonify(data=data)
 
