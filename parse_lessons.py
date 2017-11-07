@@ -45,6 +45,8 @@ class Lessons:
 		conn = MySQLdb.connect(host="localhost", user="root", passwd="engineering",db="githelp")
 		x = conn.cursor()
 		
+		x.execute("""TRUNCATE TABLE Lesson""")
+
 		for lesson in self.lessons:
 			try:
 			   x.execute(unicode("""INSERT INTO Lesson (chapter, lesson, title, body) VALUES (%s,%s,%s,%s)"""),(lesson.chapter,lesson.lesson,lesson.title,lesson.body.encode('utf-8')))
@@ -88,6 +90,21 @@ with open('./lessons/lessonsch4.json') as data_file:
 with open('./lessons/lessonsch5.json') as data_file:
 	data.append(json.load(data_file))
 
+with open('./lessons/lessonsch6.json') as data_file:
+	data.append(json.load(data_file))
+
+with open('./lessons/lessonsch7.json') as data_file:
+	data.append(json.load(data_file))
+
+with open('./lessons/lessonsch8.json') as data_file:
+	data.append(json.load(data_file))
+
+#with open('./lessons/lessonsch9.json') as data_file:
+#	data.append(json.load(data_file))
+
+with open('./lessons/lessonsch10.json') as data_file:
+	data.append(json.load(data_file))
+
 # extracts the lesson from the lesson dictionary part of the data
 
 for val in xrange(len(data)):
@@ -116,6 +133,6 @@ for chapter in xrange(len(data)):
 		
 		lessons.add_lesson(lesson)
 
-#lessons.write_to_db()
+lessons.write_to_db()
 
 
