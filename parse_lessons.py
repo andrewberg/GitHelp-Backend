@@ -1,5 +1,6 @@
 import json
 import MySQLdb
+import io
 from os import listdir
 from pprint import pprint
 
@@ -43,12 +44,14 @@ class Lessons:
 	def write_to_db(self):
 		conn = MySQLdb.connect(host="localhost", user="root", passwd="engineering",db="githelp")
 		x = conn.cursor()
-
-		try:
-		   x.execute("""INSERT INTO anooog1 VALUES (%s,%s)""",(188,90))
-		   conn.commit()
-		except:
-		   conn.rollback()
+		
+		for lesson in self.lessons:
+			try:
+			   x.execute(unicode("""INSERT INTO Lesson (chapter, lesson, title, body) VALUES (%s,%s,%s,%s)"""),(lesson.chapter,lesson.lesson,lesson.title,lesson.body.encode('utf-8')))
+			   conn.commit()
+			except Exception as e:
+				print(e)
+			   	conn.rollback()
 
 
 # sorts the list so that it reads the list properly
@@ -113,4 +116,4 @@ for chapter in xrange(len(data)):
 		
 		lessons.add_lesson(lesson)
 
-str(lessons)
+lessons.write_to_db()

@@ -3,7 +3,7 @@ use githelp;
 
 # Table for lesson to produce JSON
 CREATE TABLE Lesson (
-	uid int primary key,
+	id int primary key AUTO_INCREMENT,
 	chapter int,
 	lesson int,
 	title blob,
@@ -12,7 +12,7 @@ CREATE TABLE Lesson (
 
 # Table for QuizQuestion to produce JSON
 create TABLE QuizQuestion (
-	uid int primary key,
+	id int primary key AUTO_INCREMENT,
 	chapter int,
 	questionText blob,
 	questionID int,
@@ -21,7 +21,7 @@ create TABLE QuizQuestion (
 
 # Table for QuizChoices to produce QuizQuestions with answers
 create TABLE QuizChoices (
-	uid int primary key,
+	id int primary key AUTO_INCREMENT,
 	text blob,
 	questionID int
 );
