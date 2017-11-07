@@ -116,4 +116,6 @@ for chapter in xrange(len(data)):
 		
 		lessons.add_lesson(lesson)
 
-lessons.write_to_db()
+#lessons.write_to_db()
+
+
