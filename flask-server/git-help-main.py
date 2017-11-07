@@ -23,16 +23,25 @@ def print_lessons():
 		print(e)
 	   	conn.rollback()
 
-	print(data)
+	return jsonify(data=data)
 
-	"""jsonlist = []
-	scores = {} # init empty scores list
-	for row in rows: # iterates and adds to scores
-		score_json = {}
-		score_json['name'] = row[0]
-		score_json['score'] = row[1]
+@app.route('/quizzes')
+def print_quizzes():
+	conn = MySQLdb.connect(host="localhost", user="root", passwd="engineering",db="githelp")
+	x = conn.cursor()
 
-		jsonlist.append(score_json)"""
+	data = ""
+
+	try:
+	   #x.execute("""SELECT * FROM QuizQuestion as qq LEFT JOIN QuizChoices as qc on qq.questionID = qc.questionID
+	   	#			UNION
+	   	#			SELECT * FROM QuizQuestion as qq RIGHT JOIN QuizChoices as qc on qq.questionID = qc.questionID""")
+	   
+	   	
+	   data = x.fetchall()
+	except Exception as e:
+		print(e)
+	   	conn.rollback()
 
 	return jsonify(data=data)
 
