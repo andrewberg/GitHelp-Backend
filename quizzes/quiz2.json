@@ -5,7 +5,7 @@
     "questions":
     [
       {
-      "text":"Which command creates a new subdirectory that contains all of the necessary repository files — a Git repository skeleton?", 
+      "text":"Which command creates a new subdirectory that contains all of the necessary repository files - a Git repository skeleton?", 
       "choices":["git add", "git init" , "git commit"], 
       "index":1 
     }, 
