@@ -1,2 +1,20 @@
-{"title":"Quiz 7", "questions":[{"text":"", "choices":[], "index": }, {"text":"", "choices":[], "index": }, {"text":"", "choices":[], "index": }, {"text":"", "choices":[], "index": }, {"text":"", "choices":[], "index": }]
+{
+	"title":"Quiz 7",
+	 "questions":
+	 [{
+	 "text":"How do you list the available tags?", 
+	"choices":["git tag","git tag -v","git tag -l"],
+	 "index":2 }, 
+	 {"text":"What are the two main types of tags?", 
+	 "choices":["lightweight and shared","lightweight and annotated","shared and verified"], 
+	"index":1 },
+	 {"text":"How do you sign a tag?", 
+	 "choices":["git tag -s", "git tag sign", "git tag -a"],
+	  "index":0 },
+	   {"text":"What type of tag does git tag v1.4-lw create?",
+	    "choices":["shared","annotated","lightweight"], 
+	"index": 2}, 
+	{"text":"How do you verify a tag?", 
+	"choices":["git tag verify [tagname]","git tag -v [tagname]","git tag --v [tagname]"], 
+"index":1 }]
 }
