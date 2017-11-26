@@ -1,3 +1,21 @@
-{"title":"Quiz 10", "questions":[{"text":"", "choices":[], "index": }, {"text":"", "choices":[], "index": }, {"text":"", "choices":[], "index": }, {"text":"", "choices":[], "index": }, {"text":"", "choices":[], "index": }]
+{
+	"title":"Quiz 10", 
+	"questions":[{
+	"text":"When should a branch be merged into the master?", 
+"choices":["When it has been tested thouroughly", "When it has been tested and shown to be stable", "When the developer is finished with it"],
+ "index":1 }, 
+ {
+ "text":"What is a topic branch?", 
+"choices":["A short-lived branch created for a single feature", "A long term branch that can be reused for a feature", "A branch used to incorporate fixes into the master"], 
+"index":0 }, 
+{"text":"What are remote-tracking branches?", 
+"choices":["references to the state of remote brances","pointers to remote brances","they track the commits of remote branches"], 
+"index":0 }, 
+{"text":"How do you synchronize your work with the master?", 
+"choices":["git retrieve","git push","git fetch"], 
+"index":2 }, 
+{"text":"How do you delete a file, serverfix from origin?",
+ "choices":["git push origin -d serverfix","git push origin --delete serverfix","git pull origin -d serverfix"], 
+"index":1 }]
 }
 
