@@ -1,23 +1,52 @@
 {
-	"title":"Quiz 9",
-	 "questions":[{
-	 "text":"How do you switch between branches? Specifically how would you switch to the master branch?", 
-	"choices":["git switch 'master'", "git checkout 'master'", "git mv 'master'"],
-	 "index":1 },
-	  {
-	  "text":"How do you create a new branch?",
-	   "choices":["git checkout -b", "git create -b", "git new -b"], 
-	"index":0 }, 
-	{
-	"text":"How do you merge a branch b1 with the master?",
-	 "choices":["git merge master","git merge b1","git merge b1 master"], 
-	"index":1}, 
-	{
-	"text":"How do you delete a branch?",
-	 "choices":["git delete <branch>", "git remove <branch>", "git branch -d <branch>"],
-	  "index":2 },
-	   {
-	   "text":"After a merge conflict,  how can you see which files are unmerged? ",
-	    "choices":["git unmerged","git status","git unmerged status"], 
-	"index":1 }]
+  "quiz": {
+    "title": "Quiz 9",
+    "questions": [
+      {
+        "text": "How do you switch between branches? Specifically how would you switch to the master branch?",
+        "choices": [
+          "git switch 'master'",
+          "git checkout 'master'",
+          "git mv 'master'"
+        ],
+        "index": 1
+      },
+      {
+        "text": "How do you create a new branch?",
+        "choices": [
+          "git checkout -b",
+          "git create -b",
+          "git new -b"
+        ],
+        "index": 0
+      },
+      {
+        "text": "How do you merge a branch b1 with the master?",
+        "choices": [
+          "git merge master",
+          "git merge b1",
+          "git merge b1 master"
+        ],
+        "index": 1
+      },
+      {
+        "text": "How do you delete a branch?",
+        "choices": [
+          "git delete <branch>",
+          "git remove <branch>",
+          "git branch -d <branch>"
+        ],
+        "index": 2
+      },
+      {
+        "text": "After a merge conflict,  how can you see which files are unmerged? ",
+        "choices": [
+          "git unmerged",
+          "git status",
+          "git unmerged status"
+        ],
+        "index": 1
+      }
+    ]
+  }
 }

@@ -1,31 +1,52 @@
 {
-  "title":"Quiz 3", 
-  "questions":
-  [
-    {
-      "text":"What is the command that compares what is in your working area with what is in your staging area?", 
-      "choices":["git checkout","git diff","git status"],
-      "index":1 
-    },
+  "quiz": {
+    "title": "Quiz 3",
+    "questions": [
       {
-      "text":"What flag compares the last commit to staging changes?",
-      "choices":["--staged","--s","--c"], 
-      "index":0 
-    },
-    {
-      "text":"What flag added to the commit command automatically adds staged files to the commit?",
-      "choices":["git commit -s","git commit --add","git commit -a"], 
-      "index":2
-    }, 
+        "text": "What is the command that compares what is in your working area with what is in your staging area?",
+        "choices": [
+          "git checkout",
+          "git diff",
+          "git status"
+        ],
+        "index": 1
+      },
       {
-      "text":"What does the -m flag do when added to the commit command?", 
-      "choices":["Allows the user to include a commit message", "Allows the user to see what has been modified", "Allows the user to automatically stage files"], 
-      "index":0
-    },
-    {
-      "text":"Which flag allows the user to explicitly view the changes to be committed in the git commit command?", 
-      "choices":["-g","-c","-v"],
-      "index": 
-    }
-      ]
+        "text": "What flag compares the last commit to staging changes?",
+        "choices": [
+          "--staged",
+          "--s",
+          "--c"
+        ],
+        "index": 0
+      },
+      {
+        "text": "What flag added to the commit command automatically adds staged files to the commit?",
+        "choices": [
+          "git commit -s",
+          "git commit --add",
+          "git commit -a"
+        ],
+        "index": 2
+      },
+      {
+        "text": "What does the -m flag do when added to the commit command?",
+        "choices": [
+          "Allows the user to include a commit message",
+          "Allows the user to see what has been modified",
+          "Allows the user to automatically stage files"
+        ],
+        "index": 0
+      },
+      {
+        "text": "Which flag allows the user to explicitly view the changes to be committed in the git commit command?",
+        "choices": [
+          "-g",
+          "-c",
+          "-v"
+        ],
+        "index": 2
+      }
+    ]
+  }
 }

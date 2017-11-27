@@ -1,19 +1,52 @@
 {
-	"title":"Quiz 6", 
-	"questions":
-	[{"text":"Which command will allow you to see which remote servers you have configured?", 
-	"choices":["git view -r","git show remotes","git remote"], 
-"index":2 },
- {"text":"How do you explicitly add a remote?", 
- "choices":["git remote add <shortname><url>","git -r add <shortname><url>","git remote <shortname><url>"],
-  "index":0 }, 
-  {"text":"How do you get data from your remote projects?", 
-  "choices":["git -f <remote>","git fetch <remote>", "git retrieve <remote>"], 
-"index":1 },
- {"text":"How can you share your project?", 
- "choices":["git push <remote><branch>","git push -r <file>","git remote push <branch>"],
-  "index":0 }, 
-  {"text":"How do you remove a remote?", 
-  "choices":["git remote -r", "git remote rm", "git remove remote"], 
-"index":1 }]
+  "quiz": {
+    "title": "Quiz 6",
+    "questions": [
+      {
+        "text": "Which command will allow you to see which remote servers you have configured?",
+        "choices": [
+          "git view -r",
+          "git show remotes",
+          "git remote"
+        ],
+        "index": 2
+      },
+      {
+        "text": "How do you explicitly add a remote?",
+        "choices": [
+          "git remote add <shortname><url>",
+          "git -r add <shortname><url>",
+          "git remote <shortname><url>"
+        ],
+        "index": 0
+      },
+      {
+        "text": "How do you get data from your remote projects?",
+        "choices": [
+          "git -f <remote>",
+          "git fetch <remote>",
+          "git retrieve <remote>"
+        ],
+        "index": 1
+      },
+      {
+        "text": "How can you share your project?",
+        "choices": [
+          "git push <remote><branch>",
+          "git push -r <file>",
+          "git remote push <branch>"
+        ],
+        "index": 0
+      },
+      {
+        "text": "How do you remove a remote?",
+        "choices": [
+          "git remote -r",
+          "git remote rm",
+          "git remove remote"
+        ],
+        "index": 1
+      }
+    ]
+  }
 }

@@ -1,19 +1,34 @@
 {
-	"title":"Quiz 8",
-	 "questions":
-	 [
-	 	{
-	 	"text":"What is a branch?",
-	 "choices":["it is a lightweight movable pointer", "it is a snapshot", "it is another name for the commit"], 
-	"index":0 },
-	 {
-	 "text":"What is the name of the default branch?",
-	  "choices":["basic","primary", "master"],
-	   "index":2 },
-	    {
-	    "text":"What does the default branch direct you to?", 
-	"choices":["the first commit", "the last commit made", "the next to last commit"], 
-"index":1
- }
-]
+  "quiz": {
+    "title": "Quiz 8",
+    "questions": [
+      {
+        "text": "What is a branch?",
+        "choices": [
+          "it is a lightweight movable pointer",
+          "it is a snapshot",
+          "it is another name for the commit"
+        ],
+        "index": 0
+      },
+      {
+        "text": "What is the name of the default branch?",
+        "choices": [
+          "basic",
+          "primary",
+          "master"
+        ],
+        "index": 2
+      },
+      {
+        "text": "What does the default branch direct you to?",
+        "choices": [
+          "the first commit",
+          "the last commit made",
+          "the next to last commit"
+        ],
+        "index": 1
+      }
+    ]
+  }
 }
