@@ -23,7 +23,18 @@ def print_lessons():
 		print(e)
 	   	conn.rollback()
 
-	return jsonify(data=data)
+
+	lesson = []
+
+	for row in data:
+		lesson_json = {}
+		lesson_json['title'] = row[3]
+		lesson_json['body'] = row[4]
+
+		lesson.append(lesson_json)
+
+	
+	return jsonify({'lessons':lesson})
 
 @app.route('/quizzes')
 def print_quizzes():
@@ -48,21 +59,45 @@ def print_quizzes():
 	question_choices = []
 	cur_choices = []
 	questions = []
+	answers = []
 
-	for row in data:
+	"""for row in data:
 		if (int(row[2]) is cur_question):
-			print('true')
 			cur_choices.append(row[5])
 		else:
 			cur_question += 1
-			#print('poop')
 			question_choices.append(cur_choices)
 			cur_choices = []
 			questions.append(row[1])
+			answers.append(int(row[4]))
 
 
-	print(questions)
-
+	chapters = []
+	question = {}
+	questions_dic = []
+	cur_question = 0
+	for row in data:
+		print(row)
+		if int(row[0]) is cur_chapter and cur_question < len(questions):
+			question['text'] = questions[cur_question]
+			question['choices'] = question_choices[cur_question]
+			question['answer'] = answers[cur_question]
+			questions_dic.append(question)
+			question = {}
+			cur_question += 1
+		else:
+			cur_chapter += 1
+			chapters.append(questions_dic)
+			questions = {}"""
+	
+	"""need to go through each different question and add it to the dictionary
+		then I need to jsonify this data and print it out
+	cur_chapter = 0
+	for questions in chapters:
+		print(cur_chapter)
+		cur_chapter += 1
+		for question in questions:
+			print(question['text'])"""
 
 
 	return jsonify(data=data)

@@ -76,29 +76,29 @@ with open('./quizzes/quiz1.json') as data_file:
 with open('./quizzes/quiz2.json') as data_file:
 	data.append(json.load(data_file))
 
-"""with open('./lessons/lessonsch3.json') as data_file:
+with open('./quizzes/quiz3.json') as data_file:
 	data.append(json.load(data_file))
 
-with open('./lessons/lessonsch4.json') as data_file:
+with open('./quizzes/quiz4.json') as data_file:
 	data.append(json.load(data_file))
 
-with open('./lessons/lessonsch5.json') as data_file:
+with open('./quizzes/quiz5.json') as data_file:
 	data.append(json.load(data_file))
 
-with open('./lessons/lessonsch6.json') as data_file:
+with open('./quizzes/quiz6.json') as data_file:
 	data.append(json.load(data_file))
 
-with open('./lessons/lessonsch7.json') as data_file:
+with open('./quizzes/quiz7.json') as data_file:
 	data.append(json.load(data_file))
 
-with open('./lessons/lessonsch8.json') as data_file:
+with open('./quizzes/quiz8.json') as data_file:
 	data.append(json.load(data_file))
 
-#with open('./lessons/lessonsch9.json') as data_file:
-#	data.append(json.load(data_file))
+with open('./quizzes/quiz9.json') as data_file:
+	data.append(json.load(data_file))
 
-with open('./lessons/lessonsch10.json') as data_file:
-	data.append(json.load(data_file))"""
+with open('./quizzes/quiz10.json') as data_file:
+	data.append(json.load(data_file))
 
 # extracts the lesson from the lesson dictionary part of the data
 

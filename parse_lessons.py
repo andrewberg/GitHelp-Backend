@@ -99,8 +99,8 @@ with open('./lessons/lessonsch7.json') as data_file:
 with open('./lessons/lessonsch8.json') as data_file:
 	data.append(json.load(data_file))
 
-#with open('./lessons/lessonsch9.json') as data_file:
-#	data.append(json.load(data_file))
+with open('./lessons/lessonsch9.json') as data_file:
+	data.append(json.load(data_file))
 
 with open('./lessons/lessonsch10.json') as data_file:
 	data.append(json.load(data_file))
