@@ -1,2 +1,30 @@
-{"title":"Quiz 4", "questions":[{"text":"", "choices":[], "index": }, {"text":"", "choices":[], "index": }, {"text":"", "choices":[], "index": }, {"text":"", "choices":[], "index": }, {"text":"", "choices":[], "index": }]
+{"title":"Quiz 4", 
+	"questions":
+	[
+		{
+		"text":"Which of the following commands removes a file called test.cpp from Git ", 
+	"choices":["rm test.cpp, git rm test.cpp, remove test.cpp"],
+	 "index":1
+	  }, 
+	  {
+	  "text":"How would you move a file?", 
+	"choices":["git mv","mv", "git move"], 
+"index":0 
+}, 
+{
+"text":"What command allows you to see history of the git directory?",
+ "choices":["git mv", "git status", "git log"], 
+"index":2 
+},
+ {
+ "text":"What are the two time-limiting options?", 
+"choices":["since and last", "since and until", "until and last"],
+ "index":1 },
+  {
+  "text":"What does the graph optioin do when used?", 
+"choices":["adds a graph showing update history","adds a graph showing log history", "adds an ASCII graph showing branch and merge history"], 
+"index": 2
+}
+
+]
 }

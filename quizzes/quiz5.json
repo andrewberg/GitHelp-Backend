@@ -1,2 +1,17 @@
-{"title":"Quiz 5", "questions":[{"text":"", "choices":[], "index": }, {"text":"", "choices":[], "index": }, {"text":"", "choices":[], "index": }, {"text":"", "choices":[], "index": }, {"text":"", "choices":[], "index": }]
+{
+	"title":"Quiz 5", 
+	"questions":
+	[{"text":"How can you add to a commit, if a mistake was made in the previous commit? (i.e. forgot something)", 
+	"choices":["git commit --amend", "git commit --update", "git commit --u"],
+	 "index":0 }, 
+	 {
+	 "text":"How do you unstage a file?",
+	 "choices":["git status","git unstage <file>","git reset Head <file>"], 
+	"index": 2},
+	{
+	"text":"How do you discard changes made in working directory?", 
+	"choices":["git ignore", "git checkout", "git discard"], 
+	"index": 1
+}
+]
 }
